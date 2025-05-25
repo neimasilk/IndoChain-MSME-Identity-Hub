@@ -8,4 +8,4 @@ This document tracks completed `baby-steps` that have been implemented, tested, 
 |                 |                                                         |               |                                          |
 |                 |                                                         |               |                                          |
 
-*(This content will be filled as each `baby-step.md` is completed)*
+*(This content will be filled as each `baby-step.md` is completed)* 

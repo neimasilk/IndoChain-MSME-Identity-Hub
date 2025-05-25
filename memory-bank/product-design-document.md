@@ -54,4 +54,4 @@ IndoChain MSME Identity Hub is a platform leveraging blockchain technology for:
 * Initial investment requirement: $1.85 million[cite: 5].
 * Projected break-even: Year 3[cite: 5].
 * 5-year ROI: 285%[cite: 5].
-* Target user base: 1 million MSMEs by Year 5[cite: 5].
+* Target user base: 1 million MSMEs by Year 5[cite: 5]. 

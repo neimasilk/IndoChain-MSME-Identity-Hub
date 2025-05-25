@@ -1,30 +1,26 @@
-# Architecture Document: IndoChain MSME Identity Hub
+## Initial MVP Technology Stack Decision
 
-## Introduction
-This document will contain notes and diagrams of the IndoChain MSME Identity Hub software architecture as it evolves. It will cover key design decisions, component structures, data flows, and inter-service interactions.
+Based on the project's immediate goals for an initial MVP, market focus, and the need for technical simplification at the outset, the following key technology decision has been made for **"Step 1.1: Finalize Basic Technical Architecture & Sub-Technology Selection"**:
 
-## Initial Conceptual Architecture (Based on Proposal)
+*   **Blockchain Framework for MVP:** **Hyperledger Fabric** will be the chosen blockchain framework for the initial Minimum Viable Product (MVP).
+*   **Deployment Infrastructure:** The MVP will be deployed on the **Blockchain-based Service Network (BSN)**.
+*   **Initial Market Focus:** The initial MVP development and rollout will be focused on the **Indonesian market**.
 
-### High-Level Data Flow Diagram (MSMEs, Financial Institutions, E-commerce Platforms, etc.)
-* (Diagrams will be added here later, showing how MSMEs interact with the digital wallet, how credentials are issued and verified by various parties such as Financial Institutions, E-commerce Platforms, Government Entities, and Enterprise Supply Chains [cite: 12, 14])
+### Rationale:
 
-### Technical Architecture Layers [cite: 12]
-1.  **Application Layer:**
-    * MSME Digital Wallet [cite: 12]
-    * Credential Issuance System [cite: 12]
-    * Analytics Dashboard [cite: 12]
-    * Target Users: MSMEs, Financial Institutions, E-commerce Platforms, Government Agencies[cite: 12].
-2.  **Integration Layer:**
-    * APIs [cite: 12]
-    * Verification Portal [cite: 12]
-    * Credential Registry [cite: 12]
-3.  **Core Platform Services:**
-    * Self-Sovereign Identity [cite: 12]
-    * Verifiable Credentials [cite: 12]
-    * Smart Contracts [cite: 12]
-4.  **Blockchain Infrastructure:**
-    * BSN [cite: 12]
-    * FISCO BCOS [cite: 12]
-    * Hyperledger Fabric [cite: 12]
+This decision is based on the following factors:
+1.  **Local MVP Focus:** Aligning with the implementation plan to potentially focus the MVP on a single country for initial technical simplification. Given the user's location, Indonesia is the logical starting point.
+2.  **Hyperledger Fabric Suitability:** As outlined in `tech-stack.md` and the business proposal, Hyperledger Fabric offers enterprise-grade security and is a mature platform well-suited for building a trusted identity solution.
+3.  **BSN for Infrastructure:** Utilizing BSN aligns with the project's strategy to reduce infrastructure costs and ensure future cross-border compatibility. BSN's support for various frameworks, including Hyperledger Fabric, makes it an ideal choice.
+4.  **Phased Approach for FISCO BCOS:** FISCO BCOS, noted for its performance and compliance with Chinese regulations, will be considered for integration or as a primary focus during later expansion into the Chinese market. This phased approach allows for initial simplification without precluding future multi-framework support, leveraging BSN's interoperability.
+5.  **MVP Simplification:** Selecting a single blockchain framework for the MVP streamlines initial development, testing, and iteration, which is crucial for validating core functionalities efficiently.
 
-*(This content will be updated periodically as the project is implemented, covering details of files, modules, and specific architectural decisions.)*
+### Architectural Implications:
+
+This decision will guide the detailed technical architecture for the MVP, focusing on:
+*   Specific versioning and configuration of Hyperledger Fabric on BSN.
+*   Node deployment strategy within the BSN environment.
+*   Design of smart contracts (chaincode) for DID management and initial verifiable credentials (e.g., "business registration") tailored for Hyperledger Fabric.
+*   API design for frontend and backend services interacting with the Hyperledger Fabric network on BSN.
+
+The overall architecture will, however, be designed with modularity and flexibility in mind to accommodate the future integration of FISCO BCOS and expansion to other markets, leveraging the interoperable nature of BSN. 
